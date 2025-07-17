@@ -1,0 +1,292 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  position: relative;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  perspective: 1000px;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.content-wrapper {
+  max-width: 600px;
+}
+
+/* Simple Cube Image Styles */
+.cube-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.cube-image {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  transition: transform 0.1s ease-out;
+}
+
+.cube-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+}
+
+/* Typography */
+.main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 0%, #e5e7eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.italic-text {
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: none;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+/* Scroll Content */
+.scroll-content {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-block {
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-block:last-child {
+  border-bottom: none;
+}
+
+.content-block h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.content-block p {
+  font-size: 1.125rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Tablet Responsive - 1024px and below */
+@media (max-width: 1024px) {
+  .hero-content {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+  
+  .right-section {
+    padding-left: 2rem;
+  }
+  
+  .cube-container {
+    max-width: 400px;
+    height: 400px;
+  }
+  
+  .cube-image {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .main-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* Mobile Responsive - 768px and below */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+  
+  .left-section {
+    min-height: 50vh;
+    order: 2;
+  }
+  
+  .right-section {
+    padding-left: 0;
+    order: 1;
+  }
+  
+  .cube-container {
+    max-width: 350px;
+    height: 350px;
+  }
+  
+  .cube-image {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .main-title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .scroll-content {
+    padding: 3rem 1rem;
+  }
+  
+  .content-block {
+    padding: 2rem 0;
+  }
+  
+  .content-block h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content-block p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile - 480px and below */
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .cube-container {
+    max-width: 280px;
+    height: 280px;
+  }
+  
+  .cube-image {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .main-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+  }
+  
+  .scroll-content {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Extra Small Mobile - 360px and below */
+@media (max-width: 360px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .cube-container {
+    max-width: 240px;
+    height: 240px;
+  }
+  
+  .cube-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Mobile - 320px and below */
+@media (max-width: 320px) {
+  .cube-container {
+    max-width: 200px;
+    height: 200px;
+  }
+  
+  .cube-image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .main-title {
+    font-size: 1.6rem;
+  }
+}
