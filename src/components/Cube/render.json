@@ -1,0 +1,7 @@
+
+{
+  "staticDeploy": {
+    "buildCommand": "npm run build",
+    "publishPath": "dist"
+  }
+}
