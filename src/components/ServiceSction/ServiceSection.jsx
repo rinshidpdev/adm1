@@ -56,8 +56,15 @@ const ServiceSection = () => {
             </p>
           </div>
         </div>
+        
       </div>
+      <div className="cont">
+          <h1>Fuel your business growth with digital solutions</h1>
+           <h2> <span>from</span>  ADM Agency</h2>
+           <p>Our expert team at ADM Agency delivers strategic solutions designed to enhance your <br /> brand presence, optimize digital performance, and streamline operations</p>
+        </div>
     </div>
+    
   );
 };
 

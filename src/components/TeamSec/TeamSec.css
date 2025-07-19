@@ -1,0 +1,212 @@
+/* TeamSec.css */
+
+.team-section {
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.team-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.team-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.team-title .italic {
+  font-style: italic;
+}
+
+/* Grid Layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 80px;
+}
+
+/* Card Styles */
+.team-card {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-inner {
+  background: #2a2a2a;
+  border: 1px solid #404040;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 420px;
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .member-image {
+  transform: scale(1.05);
+}
+
+/* Content positioned at bottom like in image */
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.text-section {
+  flex: 1;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.member-role {
+  font-size: 0.85rem;
+  color: #cccccc;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Arrow Container */
+.arrow-container {
+  margin-left: 15px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .arrow-container {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+.arrow-circle {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.team-card:hover .arrow-circle {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .team-title {
+    font-size: 3rem;
+  }
+  
+  .card-inner {
+    height: 400px;
+  }
+  
+  .image-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 15px;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .team-title {
+    font-size: 2.5rem;
+  }
+  
+  .team-header {
+    margin-bottom: 60px;
+  }
+  
+  .card-inner {
+    height: 380px;
+  }
+  
+  .image-container {
+    height: 280px;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .member-name {
+    font-size: 1rem;
+  }
+  
+  .member-role {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-title {
+    font-size: 2rem;
+  }
+  
+  .card-inner {
+    height: 350px;
+  }
+  
+  .image-container {
+    height: 250px;
+  }
+}

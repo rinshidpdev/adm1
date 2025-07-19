@@ -102,3 +102,31 @@
   position: relative;
   z-index: 1;
 }
+
+.cont h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: 400; /* Or 500 for bolder look */
+  color: white;
+}
+
+.cont h2{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem; 
+  text-align: center;
+  margin-top: 20px; 
+}
+.cont span{
+   font-family: 'Roboto', sans-serif;
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: 400; /* Or 500 for bolder look */
+  color: white;
+  text-align: center;
+}
+
+.cont p{
+  text-align: center;
+  margin-top: 8px;
+  font-size: medium;
+}

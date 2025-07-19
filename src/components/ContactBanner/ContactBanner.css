@@ -1,0 +1,172 @@
+/* ContactBanner.css */
+.contact-banner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d1b1b 50%, #1a1a1a 100%);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(8rem, 20vw, 25rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  letter-spacing: 0.1em;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.section-label {
+  color: #ff6b35;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.main-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.get-in-touch {
+  color: #ff6b35;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.with-text {
+  color: white;
+  font-weight: 400;
+}
+
+.agency-text {
+  color: white;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.services-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.description strong,
+.services-text strong {
+  color: white;
+  font-weight: 600;
+}
+
+.play-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
+}
+
+.play-icon {
+  font-size: 2rem;
+  color: #ff6b35;
+  margin-left: 5px;
+}
+
+/* Add some background texture/grain effect */
+.contact-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter></defs><rect width="100%" height="100%" filter="url(%23noiseFilter)" opacity="0.03"/></svg>');
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-banner {
+    padding: 2rem 1rem;
+    min-height: 90vh;
+  }
+  
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .background-text {
+    font-size: clamp(4rem, 15vw, 8rem);
+  }
+  
+  .main-heading {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .description,
+  .services-text {
+    font-size: 1rem;
+  }
+  
+  .play-button {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .play-icon {
+    font-size: 1.5rem;
+  }
+}

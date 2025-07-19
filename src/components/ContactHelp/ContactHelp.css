@@ -1,0 +1,88 @@
+.contact-help-container {
+  background: #000;
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.contact-help-header p {
+  color: #f9c87a;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.contact-help-header h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.contact-help-header .highlight {
+  color: #f2856d;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #111;
+  border-radius: 25px;
+  padding: 25px;
+  width: 250px;
+  min-height: 280px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  background: #f97341;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.contact-card hr {
+  border-color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.card-action {
+  font-size: 14px;
+  color: #ff5c3d;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.card-action span {
+  margin-left: 5px;
+}

@@ -1,6 +1,7 @@
 // HeroPage.jsx
 import React, { useEffect } from 'react';
 import './Hero.css';
+import video from '../../assets/bg-video.mp4'
 
 const HeroPage = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const HeroPage = () => {
       {/* Video Background */}
       <div className="video-background">
         <video autoPlay muted loop>
-          <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

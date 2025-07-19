@@ -1,0 +1,63 @@
+/* src/components/AboutSec.css */
+.about-section {
+  background-color: #000;
+  color: white;
+  padding: 100px 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 370px;
+  margin-top: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-left {
+  flex: 1 1 50%;
+  padding-right: 40px;
+}
+
+.about-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.about-heading {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.about-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-right {
+  flex: 1 1 45%;
+}
+
+.about-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
