@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Menu, X } from 'lucide-react';
 import './Navbar.css';
 import Logo from '../../assets/admLogo.png';
@@ -9,20 +10,19 @@ const Navbar = () => {
   const servicesTimeoutRef = useRef(null);
 
   const services = [
-    'Branding',
-     'Videography',
-     'Photography',
-    'Social Media Marketing',
-    'Paid Ads',
-    'SEO',
-    'Social Media Marketing',
-    'Web Designing',
-    'Web Development'
+    { name: 'Branding', link: '/services/branding' },
+    { name: 'Videography', link: '/videography' },
+    { name: 'Photography', link: '/photography' },
+    { name: 'Social Media Marketing', link: '/services/socialmedia-marketing' },
+    { name: 'Paid Ads', link: '/services/paid-ads' },
+    { name: 'SEO', link: '/services/seo' },
+    { name: 'Web Designing', link: '/services/web-designing' },
+    { name: 'Web Development', link: '/services/web-development' }
   ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    setIsServicesOpen(false); // close dropdown when mobile menu toggled
+    setIsServicesOpen(false);
   };
 
   const handleMouseEnter = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     servicesTimeoutRef.current = setTimeout(() => {
       setIsServicesOpen(false);
-    }, 200); // slight delay to prevent flicker
+    }, 200);
   };
 
   return (
@@ -41,15 +41,16 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="logo">
-          <img src={Logo} alt="Aidara" className="logo-icon" />
+          <Link to="/" onClick={() => setIsServicesOpen(false)}>
+            <img src={Logo} alt="Aidara" className="logo-icon" />
+          </Link>
         </div>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation */}
         <div className="nav-links desktop-nav">
-          <a href="/" className="nav-link">Home</a>
-          <a href="/about" className="nav-link">About</a>
+          <Link to="/" className="nav-link" onClick={() => setIsServicesOpen(false)}>Home</Link>
+          <Link to="/about" className="nav-link" onClick={() => setIsServicesOpen(false)}>About</Link>
 
-          {/* Services Dropdown with FIXED Hover Behavior */}
           <div
             className="dropdown"
             onMouseEnter={handleMouseEnter}
@@ -64,20 +65,24 @@ const Navbar = () => {
               <div className="dropdown-menu">
                 <div className="dropdown-content">
                   {services.map((service, index) => (
-                    <a key={index} href="#" className="dropdown-item">
-                      {service}
-                    </a>
+                    <Link
+                      key={index}
+                      to={service.link}
+                      className="dropdown-item"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
                   ))}
                 </div>
               </div>
             )}
           </div>
 
-          
-          <a href="/contact" className="nav-link">Contact</a>
+          <Link to="/contact" className="nav-link" onClick={() => setIsServicesOpen(false)}>Contact</Link>
         </div>
 
-        {/* Mobile Hamburger Menu */}
+        {/* Mobile Hamburger */}
         <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <X className="hamburger-icon" /> : <Menu className="hamburger-icon" />}
         </button>
@@ -86,10 +91,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="mobile-menu">
-          <a href="/" className="mobile-nav-link">Home</a>
-          <a href="/about" className="mobile-nav-link">About</a>
+          <Link to="/" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+          <Link to="/about" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
 
-          {/* Mobile Services Dropdown */}
           <div className="mobile-dropdown">
             <button className="mobile-dropdown-toggle" onClick={() => setIsServicesOpen(!isServicesOpen)}>
               <span>Services</span>
@@ -99,16 +103,23 @@ const Navbar = () => {
             {isServicesOpen && (
               <div className="mobile-dropdown-menu">
                 {services.map((service, index) => (
-                  <a key={index} href="#" className="mobile-dropdown-item">
-                    {service}
-                  </a>
+                  <Link
+                    key={index}
+                    to={service.link}
+                    className="mobile-dropdown-item"
+                    onClick={() => {
+                      setIsServicesOpen(false);
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    {service.name}
+                  </Link>
                 ))}
               </div>
             )}
           </div>
 
-          
-          <a href="/contact" className="mobile-nav-link">Contact</a>
+          <Link to="/contact" className="mobile-nav-link" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </div>
       )}
     </nav>

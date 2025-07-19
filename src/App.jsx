@@ -10,8 +10,13 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
-import Branding from './components/Branding'
-import WhyChooseBranding from './components/WhyChooseBranding/WhyChooseBranding'
+import Branding from './components/WhyChooseBranding/Branding'
+import SocialMedia from './components/WhyChooseBranding/SocialMedia'
+import Web from './components/WhyChooseBranding/Web'
+import WebDesigning from './components/WhyChooseBranding/WebDesigning'
+import SEO from './components/WhyChooseBranding/SEO'
+import ADS from './components/WhyChooseBranding/ADS'
+
 
 const App = () => {
   return (
@@ -21,8 +26,14 @@ const App = () => {
    <Route path='/' element={<Home/>}/>
    <Route path='/about' element={<AboutUs/>}/>
    <Route path='/contact' element={<ContactUs/>}/>
-   <Route path='/branding' element={<Branding/>}/>
-   <Route path='/y' element={<WhyChooseBranding/>}/>
+   <Route path='/services/branding' element={<Branding/>}/>
+   <Route path='/services/socialmedia-marketing' element={<SocialMedia/>}/>
+   <Route path='/services/web-development' element={<Web/>}/>
+   <Route path='/services/web-designing' element={<WebDesigning/>}/>
+   <Route path='/services/seo' element={<SEO/>}/>
+   <Route path='/services/paid-ads' element={<ADS/>}/>
+  
+
    </Routes>
    <Footer/>
     </>
