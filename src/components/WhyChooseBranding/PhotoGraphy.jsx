@@ -1,46 +1,46 @@
 import React from 'react';
 import './WhyChooseBranding.css';
-import d1 from '../../assets/d1.png'
-import d2 from '../../assets/d2.png'
-import d3 from '../../assets/d3.png'
-import d4 from '../../assets/d4.png'
-import d5 from '../../assets/d5.png'
+import ph1 from '../../assets/ph6.jpg'
+import ph2 from '../../assets/ph2.jpg'
+import ph3 from '../../assets/ph3.jpg'
+import ph4 from '../../assets/ph4.jpg'
+import ph5 from '../../assets/ph5.jpg'
 
 const PhotoGraphy = () => {
   const features = [
     {
       id: 1,
-      title: "Conversion Driven UI",
-      subtitle: "Designs that Convert, Not Just Impress",
-      description: "We don’t design for vanity—we design for action. Our user interfaces are crafted to guide visitors through a seamless journey from landing to conversion. Every element—from button placement and color psychology to layout hierarchy and micro-interactions—is intentionally built to increase conversions.",
-      image: d2,
+      title: "Product Shoot",
+      subtitle: "Showcase Your Product in Its Best Light",
+      description: "In today’s visual world, quality imagery can make or break your brand. Professional product photography doesn't just capture objects — it tells a story, builds trust, and drives sales. From clean e-commerce shots to creative lifestyle imagery, a powerful product shoot highlights every detail, making your brand stand out in a crowded market and helping customers connect before they even click buy",
+      image: ph5,
       imageAlt: "Brand consistency mockup",
       layout: "left"
     },
     {
       id: 2,
-      title: "Made to Feel Effortless",
-      subtitle: "UX Grounded in Human Behavior",
-      description: "We design with empathy, usability, and natural flow at the core. By leveraging behavioral psychology and user research, we create intuitive paths aligned with how real people think, browse, and decide. Every touchpoint is thoughtfully structured to eliminate friction and enhance flow.",
-      image: d3,
+      title: " Industrial & Real Estate Shoot",
+      subtitle: "Bring Big Spaces and Bold Structures to Life",
+      description: "In industries where precision and scale matter, high-quality visuals are key. Whether it’s a sprawling factory, a buzzing warehouse, or a luxury real estate property, professional shoots showcase the size, efficiency, and design of",
+      image: ph4,
       imageAlt: "Brand differentiation 3D design",
       layout: "right"
     },
     {
       id: 3,
-      title: "Responsive by Default",
-      subtitle: "Flawless Experience on Any Device",
-      description: "Responsiveness is never an afterthought—it’s built from the start. Using fluid grids, adaptive components, and mobile-first principles, we ensure your site looks and feels amazing on every screen size—smartphone, tablet, or desktop.",
-      image: d4,
+      title: "Event Shoot",
+      subtitle: "Capture Moments That Matter",
+      description: "Every event is a story unfolding — and great photography ensures it’s remembered forever. From corporate gatherings and product launches to weddings and cultural festivals, a professional event shoot captures the energy, emotion, and key highlights in every frame. These images not only preserve memories but also serve as powerful content for social media, marketing, and future promotions",
+      image: ph2,
       imageAlt: "Branding strategy diagram",
       layout: "left"
     },
     {
       id: 4,
-      title: "Built for Visual Impact",
-      subtitle: "Motion, Color, and Typography That Captivate",
-      description: "We blend bold aesthetics with strategic creativity to make your brand stand out. Through animation, color theory, and expressive typography, we craft an experience that resonates emotionally and visually—creating a lasting impression from the first glance.",
-      image: d5,
+      title: "Food Shoot",
+      subtitle: "Make Taste Visible Through Stunning Visuals",
+      description: "In the world of food, people eat with their eyes first. A professional food shoot captures the texture, color, and flavor of every dish — turning meals into mouth-watering visuals. Whether it's for a restaurant menu, social media, or a delivery app, high-quality food photography helps you attract customers, build cravings, and create a brand that’s impossible to ignore.",
+      image: ph3,
       imageAlt: "Pump neon sign",
       layout: "right"
     }
@@ -61,7 +61,7 @@ const PhotoGraphy = () => {
           </div>
           <div className="branding-right">
             <div className="branding-image-container">
-              <img src={d1} alt="Neon sign" className="branding-image" />
+              <img src={ph1} alt="Neon sign" className="branding-image" />
             </div>
           </div>
         </div>
@@ -70,9 +70,9 @@ const PhotoGraphy = () => {
       {/* Why Choose Branding Section */}
       <div className="why-choose-branding">
         <div className="why-choose-header">
-          <h2 className="why-choose-title">Why Do Users Stay Longer on Our Websites?</h2>
+          <h2 className="why-choose-title">Why Do Brands Trust Our Photography?</h2>
           <p className="why-choose-description">
-           Beyond aesthetics our designs are rooted in psychology, interactive, and clarity to convert casual visits into long connections.
+                We go beyond just clicking pictures — our shoots are crafted with storytelling, lighting precision, and brand identity in mind. Every shot speaks, sells, and stays memorable.
           </p>
         </div>
 

@@ -12,7 +12,7 @@ const Navbar = () => {
   const services = [
     { name: 'Branding', link: '/services/branding' },
     { name: 'Videography', link: '/videography' },
-    { name: 'Photography', link: '/photography' },
+    { name: 'Photography', link: '/services/photo-graphy' },
     { name: 'Social Media Marketing', link: '/services/socialmedia-marketing' },
     { name: 'Paid Ads', link: '/services/paid-ads' },
     { name: 'SEO', link: '/services/seo' },
